@@ -17,6 +17,7 @@ jobs:
         run: |
           cd lib
           touch test_file.dart
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           git commit -a
-      - name: Create tag
-        run: git push origin v1.0.0 
+          git push origin v1.0.0 
