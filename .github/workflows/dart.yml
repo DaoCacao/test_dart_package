@@ -1,0 +1,22 @@
+name: Dart
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - run: dart pub get
+      - name: Create test file
+        run: |
+          cd lib
+          touch test_file.dart
+          git commit -a
+      - name: Create tag
+        run: git push origin v1.0.0 
