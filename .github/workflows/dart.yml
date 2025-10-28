@@ -19,5 +19,6 @@ jobs:
           touch test_file.dart
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
-          git commit -a
+          git add lib/
+          git commit -m "Add file"
           git push origin v1.0.0 
