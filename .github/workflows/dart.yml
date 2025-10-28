@@ -21,4 +21,5 @@ jobs:
           git config --global user.name "Your Name"
           git add -A
           git commit -m "Add file"
+          git tag v1.0.0
           git push origin v1.0.0 
